@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        table(border='1px', cellpadding='5px')
+            thead 
+                tr  
+                    th Nome 
+                    th Telefone-Whatsapp 
+                    th E-mail
+                    th CPF
+                    th Estado 
+                    th Cidade
+                    th Data de Nascimento 
+                    th Titulo da foto 
+                    th Nome do(a) fotográfo(a)
+                    th Nome da foto
+
+            tbody 
+                each estudante in todosOsEstudantes
+                    tr 
+                        td #{estudante.nome}
+                        td #{estudante.tel_whats}  
+                        td #{estudante.email}
+                        td #{estudante.cpf}
+                        td #{estudante.estado}
+                        td #{estudante.cidade}
+                        td #{estudante.data_nascimento}
+                        td #{estudante.titulo_foto}
+                        td #{estudante.nome_fotografa}
+                        td 
+                            img(src=`/uploads/${estudante.nome_foto}.jpg`)
+                        
+                        
