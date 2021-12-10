@@ -19,7 +19,14 @@ const database = require('../models');
             
         }
     }
-
+    
+    static async album(req, res) {
+        res.render('form-album-digital');
+    }
+    static async index(req, res) {
+        res.render('index');
+    }
+    
     static async pegaUmEstudante(req, res) {
         const { id } = req.params;
         try{

@@ -14,7 +14,8 @@ module.exports = {
        nome_responsavel:"eric",
        cpf_responsavel:"1231233",
        titulo_foto:"aaa",
-       nome_foto:"asdasd",
+       nome_fotografa:"deise",
+       nome_foto:"asdasd.jpg",
 
       createdAt: new Date(),
       updatedAt: new Date()

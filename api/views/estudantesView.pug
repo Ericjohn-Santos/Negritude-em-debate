@@ -5,20 +5,21 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
     body 
-        table(border='1px', cellpadding='5px')
+        table.table
             thead 
                 tr  
-                    th Nome 
-                    th Telefone-Whatsapp 
-                    th E-mail
-                    th CPF
-                    th Estado 
-                    th Cidade
-                    th Data de Nascimento 
-                    th Titulo da foto 
-                    th Nome do(a) fotográfo(a)
-                    th Nome da foto
+                    th.text-primary Nome 
+                    th(scope='col') Telefone-Whatsapp 
+                    th(scope='col') E-mail
+                    th(scope='col') CPF
+                    th(scope='col') Estado 
+                    th(scope='col') Cidade
+                    th(scope='col') Data de Nascimento 
+                    th(scope='col') Titulo da foto 
+                    th(scope='col') Nome do(a) fotográfo(a)
+                    th(scope='col') Nome da foto
 
             tbody 
                 each estudante in todosOsEstudantes
@@ -33,6 +34,6 @@ html(lang="en")
                         td #{estudante.titulo_foto}
                         td #{estudante.nome_fotografa}
                         td 
-                            img(src=`/uploads/${estudante.nome_foto}.jpg`)
+                            img(src=`/uploads/${estudante.nome_foto}`)
                         
                         
